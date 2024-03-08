@@ -20,21 +20,34 @@ using namespace std;
 int main()
 {
     ifstream inFile;
-
     inFile.open("SalaryData.txt"); //open file
-
-
+    /*
     if (!inFile)
     {
         cout << "could not open file" << endl;
         return 1;
     }
+    */
+    ofstream outFile;
+    outFile.open("Salary.out"); //open file
 
     string lastName, firstName;
-    double salary, income; //Initialize original price as Origprice
+    double salary, increase, updatedSalary; //Initialize original price as Origprice
 
-    inFile >> lastName >> firstName >> salary >> income;  // to check amount 
-    cout << lastName << firstName << salary << income << endl;   // to check amount 
+    outFile << fixed << showpoint << setprecision(2) << setw(6) << endl;  // to check amount 
+    
+
+    inFile >> lastName >> firstName >> salary >> increase;  // to check amount 
+
+    updatedSalary = salary * increase;
+    outFile << firstName << " " << lastName << " " << updatedSalary << endl;   // to check amount 
 
     
+
+
+
+    outFile.close(); //close file  
+
+    return 0;
+
 }
