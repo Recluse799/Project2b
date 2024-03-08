@@ -24,7 +24,7 @@ int main()
     inFile.open("SalaryData.txt"); //open file
 
 
-    if (inFile.is_open());
+    if (!inFile)
     {
         cout << "could not open file" << endl;
         return 1;
@@ -36,4 +36,5 @@ int main()
     inFile >> lastName >> firstName >> salary >> income;  // to check amount 
     cout << lastName << firstName << salary << income << endl;   // to check amount 
 
-    return 1;
+    
+}
