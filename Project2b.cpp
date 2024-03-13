@@ -1,6 +1,6 @@
 // Project2b.cpp : This file contains the 'main' function. Program execution begins and ends there.
-
-/*Immanuel Braxton
+/*
+Immanuel Braxton
     3/7/2024
     Explain  CODE
     his program will calculate and show the mark up, original price and tax rates of inputted items.
@@ -35,18 +35,23 @@ int main()
     double salary, increase, updatedSalary; //Initialize original price as Origprice
 
     outFile << fixed << showpoint << setprecision(2) << setw(6) << endl;  // to check amount 
+
+    int i;
+        i = 0; 
+        while (i < 3)
+            {
+            inFile >> lastName >> firstName >> salary >> increase;  // to check amount 
+
+            updatedSalary = salary * increase;
+
+            outFile << firstName << " " << lastName << "  " << updatedSalary << endl;   // to check amount 
+            ++i;
+            }
     
 
-    inFile >> lastName >> firstName >> salary >> increase;  // to check amount 
+    inFile.close(); //close infile 
 
-    updatedSalary = salary * increase;
-    outFile << firstName << " " << lastName << " " << updatedSalary << endl;   // to check amount 
-
-    
-
-
-
-    outFile.close(); //close file  
+    outFile.close(); //close outfile  
 
     return 0;
 
