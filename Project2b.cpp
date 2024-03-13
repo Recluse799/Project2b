@@ -3,8 +3,8 @@
 Immanuel Braxton
     3/7/2024
     Explain  CODE
-    his program will calculate and show the mark up, original price and tax rates of inputted items.
-    
+    This program reads a File to input data and calculates the salary increase. It then displays the  full name of the workers in the correct order and their salary increase
+  
  */
     
 #include <iostream> 
@@ -29,22 +29,22 @@ int main()
     }
     */
     ofstream outFile;
-    outFile.open("Salary.out"); //open file
+    outFile.open("Salary.out"); //open  outfile
 
     string lastName, firstName;
-    double salary, increase, updatedSalary; //Initialize original price as Origprice
+    double salary, increase, updatedSalary; //Initialize salary, increase, and updatedSalary
 
-    outFile << fixed << showpoint << setprecision(2) << setw(6) << endl;  // to check amount 
+    outFile << fixed << showpoint << setprecision(2) << setw(6) << endl;  // to output appropriate amount with decimal 
 
     int i;
         i = 0; 
         while (i < 3)
             {
-            inFile >> lastName >> firstName >> salary >> increase;  // to check amount 
+            inFile >> lastName >> firstName >> salary >> increase;  // to get information 
 
             updatedSalary = salary * increase;
 
-            outFile << firstName << " " << lastName << "  " << updatedSalary << endl;   // to check amount 
+            outFile << firstName << " " << lastName << "  " << updatedSalary << endl;   // to ouput information
             ++i;
             }
     
