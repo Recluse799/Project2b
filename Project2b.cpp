@@ -42,7 +42,11 @@ int main()
             {
             inFile >> lastName >> firstName >> salary >> increase;  // to get information 
 
-            updatedSalary = salary * increase;
+            increase = increase / 100;  // makes it a decimal point
+
+            updatedSalary = salary * increase; //calculate the percent increasee
+
+            updatedSalary = updatedSalary + salary  // calculate updated salary
 
             outFile << firstName << " " << lastName << "  " << updatedSalary << endl;   // to ouput information
             ++i;
