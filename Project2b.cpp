@@ -46,9 +46,10 @@ int main()
 
             updatedSalary = salary * increase; //calculate the percent increasee
 
-            updatedSalary = updatedSalary + salary  // calculate updated salary
+            updatedSalary = updatedSalary + salary;  // calculate updated salary
 
             outFile << firstName << " " << lastName << "  " << updatedSalary << endl;   // to ouput information
+
             ++i;
             }
     
